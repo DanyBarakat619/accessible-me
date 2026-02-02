@@ -1,6 +1,8 @@
+/* Updated background and text colors to meet WCAG contrast requirements */
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #ffffff;
+  color: #222222;
   margin: 0;
   padding: 0;
 }
@@ -69,3 +71,39 @@ form button {
 .site-footer {
   padding: 2rem 0;
 }
+/* Improved link contrast and visibility for navigation */
+.main-nav a {
+  color: #005fcc;
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  text-decoration: underline;
+}
+
+/* Added visible focus styles for keyboard users */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* Skip link styling allows keyboard users to jump to main content */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px 12px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+
